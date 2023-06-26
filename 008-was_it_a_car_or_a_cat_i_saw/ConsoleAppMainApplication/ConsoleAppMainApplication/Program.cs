@@ -6,12 +6,12 @@ Palindromes are not case sensitive.
 
 using System;
 
-Console.WriteLine("Inserisci una parola o una frase");
+Console.WriteLine("Insert a word or a sentence");
 string? input = Console.ReadLine();
 
 if (input == null || input == "")
 {
-    Console.WriteLine("Input non valido");
+    Console.WriteLine("Input not valid!");
     Environment.Exit(1);
     return;
 }

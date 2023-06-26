@@ -5,16 +5,23 @@
  */
 
 
+using ConsoleAppMainApplication.Model;
 
 MyClass myObj = new MyClass();
 
 // Accessing private member (Compilation error)
+// A private attribute (property, variable, etc.) can be used directly only inside its own class.
 // Console.WriteLine(myObj.privateMember);
-// a private attribute (property, variable ...) can be used only inside its class
+// A getter method allows accessing the attribute in spite of the access modifiers
+Console.WriteLine(myObj.GetPrivateMember());
+
 
 // Accessing protected member (Compilation error)
-// Console.WriteLine(myObj.protectedMember);
-// A protected attribute (property, variable, etc.) can only be used within its class and the classes that inherit from it.
+// A protected attribute (property, variable, etc.) can only be used directly within its own class or in the classes that inherit from it.
+//Console.WriteLine(myObj.protectedMember);
+// A getter method allows accessing the attribute in spite of the access modifiers
+Console.WriteLine(myObj.GetProtectedMember());
+
 
 // Accessing internal member (No compilation error)
 Console.WriteLine(myObj.internalMember);
@@ -23,12 +30,3 @@ Console.WriteLine(myObj.internalMember);
 // Accessing public member (No compilation error)
 Console.WriteLine(myObj.publicMember);
 // A public attribute (property, variable, etc.) can be accessed and used by code both within the same assembly and in other assemblies.
-
-
-public class MyClass
-{
-    private int privateMember = 10;
-    protected int protectedMember = 20;
-    internal int internalMember = 30;
-    public int publicMember = 40;
-}
