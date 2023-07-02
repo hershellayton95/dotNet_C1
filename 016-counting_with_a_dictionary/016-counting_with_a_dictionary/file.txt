@@ -1,0 +1,1 @@
+Create an application that allows a user to give a path to a .txt file. That file should contain a lot of words, with some duplicates. The application should create a Dictionary<string, int> to store every unique word, and how often they appear in the file. For this purpose, words are not case-sensitive.

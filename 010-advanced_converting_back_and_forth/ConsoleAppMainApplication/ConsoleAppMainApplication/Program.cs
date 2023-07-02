@@ -9,7 +9,7 @@ using ConsoleAppMainApplication.Model;
 while (true)
 {
     string? input = null;
-    IConverter converter = new Converter();
+    IConverter converter; ;
     Console.WriteLine("Make a chosen");
     Console.WriteLine("1 - Celsius to Fahrenheit");
     Console.WriteLine("2 - Fahrenheit to Celsius");
@@ -20,10 +20,12 @@ while (true)
     switch (input)
     {
         case "1":
-            Console.WriteLine(converter.CelsiusToFahrenheit(Input.InputToDouble()));
+            converter = new ToFahrenheitConverter();
+            Console.WriteLine(converter.Convert(Input.InputToDouble()));
             break;
         case "2":
-            Console.WriteLine(converter.FahrenheitToCelsius(Input.InputToDouble()));
+            converter = new ToCelsiusConverter();
+            Console.WriteLine(converter.Convert(Input.InputToDouble()));
             break;
         case "7":
             Environment.Exit(0);

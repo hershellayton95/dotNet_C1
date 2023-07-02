@@ -8,7 +8,6 @@ namespace ConsoleAppMainApplication.Model
 {
     internal interface IConverter
     {
-        string CelsiusToFahrenheit(double celsius);
-        string FahrenheitToCelsius(double fahrenheit);
+        string Convert(double temperature);
     }
 }
