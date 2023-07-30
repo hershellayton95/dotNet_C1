@@ -1,0 +1,5 @@
+﻿Let's start building a website. Create a new ASP.NET MVC application.
+We want a Controller and matching Views for two classes: Question and Answer.
+A question should have an Author, Title, Description. It can have multiple answers.
+An answer should have an Author, Description, IsAccepted property and 1 Question.
+Create the CRUD (Create, Read, Update, Delete) views, they don't have to be functional yet.

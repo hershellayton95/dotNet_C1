@@ -19,14 +19,14 @@ namespace _031_lets_create_a_queue
 
         public T Dequeue()
         {
-            T firstElem = _queue.First();
-            _queue.RemoveFirst();
+            T firstElem = _queue.Last();
+            _queue.RemoveLast();
             return firstElem;
         }
 
         public T Peek()
         {
-            T firstElem = _queue.First();
+            T firstElem = _queue.Last();
             return firstElem;
         }
 

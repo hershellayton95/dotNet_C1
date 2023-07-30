@@ -1,0 +1,2 @@
+﻿Modify the Details page of a Question. Instead of displaying a question, it should display a question with all of its answers.
+To do so, you might want to include a view model. How will you build a list of repeating questions? You could use a loop and perhaps look into Partial Views.
