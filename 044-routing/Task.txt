@@ -1,0 +1,2 @@
+﻿By default, ASP.NET MVC uses the route {controller}/{action}/{id}.
+This works fine if we need to view a question (e.g. question/details/42), but we want the URL to be more descriptive.
