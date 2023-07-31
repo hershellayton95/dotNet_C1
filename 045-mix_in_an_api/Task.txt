@@ -1,0 +1,4 @@
+﻿Even in a MVC project, you can include API controllers.
+Include a controller that returns the full list of questions in JSON.
+The name and route of it are yours to decide on. Check the video for the differences of an API controller vs MVC.
+You might also need to do some research online.
