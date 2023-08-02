@@ -11,6 +11,10 @@
                 {
                     <span>(Accepted)</span>
                 }
+
+                <span>
+                    @Html.ActionLink("Details", "Details","Answer", new { id=answer.Id })
+                </span>
             </li>
         }
     </ol>

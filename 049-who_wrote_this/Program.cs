@@ -6,7 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 
-builder.Services.AddSingleton<IQuestionRepository, QuestionRepository>().AddSingleton<IAnswerRepository, AnswerRepository>();
+builder.Services.AddSingleton<IAuthorsRepository, AuthorsRepository>()
+    .AddSingleton<IQuestionRepository, QuestionRepository>()
+    .AddSingleton<IAnswerRepository, AnswerRepository>();
 
 var app = builder.Build();
 

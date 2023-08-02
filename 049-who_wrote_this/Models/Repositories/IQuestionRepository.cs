@@ -4,5 +4,6 @@
     {
         IEnumerable<Question> GetAll();
         Question GetById(int id);
+        void Add(Question question);
     }
 }

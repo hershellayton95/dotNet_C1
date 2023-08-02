@@ -1,14 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MVCExercise.Models;
+using MVCExercise.Models.Repositories;
 
 namespace MVCExercise.Controllers
 {
     public class AuthorController : Controller
     {
+        private readonly IAuthorsRepository _authorsRepository;
+
+        public AuthorController(IAuthorsRepository authorsRepository)
+        {
+            this._authorsRepository = authorsRepository;
+        }
         // GET: AuthorController
         public ActionResult Index()
         {
-            return View();
+            var authors = _authorsRepository.GetAll();
+            return View(authors);
         }
 
         // GET: AuthorController/Details/5
@@ -26,10 +35,22 @@ namespace MVCExercise.Controllers
         // POST: AuthorController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Author collection)
         {
             try
             {
+                var authorId = 1;
+                if (_authorsRepository.GetAll().Any())
+                    authorId = _authorsRepository.GetAll().Last().Id + 1;
+
+                var author = new Author
+                {
+                    Id = authorId,
+                    Name = collection.Name
+                };
+
+                _authorsRepository.Add(author);
+
                 return RedirectToAction(nameof(Index));
             }
             catch

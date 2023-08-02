@@ -23,7 +23,8 @@ namespace _042_devoverflow.Controllers
         // GET: AnswerController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var answer = _answerRepository.GetById(id);
+            return View(answer);
         }
 
         // GET: AnswerController/Create
