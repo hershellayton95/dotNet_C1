@@ -1,0 +1,21 @@
+﻿@model List<MVCExercise.Models.Answer>
+
+@if (Model.Any())
+{
+    <ol>
+        @foreach (var answer in Model)
+        {
+            <li>
+                @answer.Description
+                @if (answer.IsAccepted)
+                {
+                    <span>(Accepted)</span>
+                }
+            </li>
+        }
+    </ol>
+}
+else
+{
+    <p>No answers for this question yet.</p>
+}
