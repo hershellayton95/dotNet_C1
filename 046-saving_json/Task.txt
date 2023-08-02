@@ -1,3 +1,2 @@
-﻿JSON is nice, but it's just text.
-Can you parse the JSON coming from the API and turn it into Questions and answers again?
-
+﻿Create a console application that calls the endpoint you create in exercise 5.
+It should read the JSON and save it to your local hard drive.

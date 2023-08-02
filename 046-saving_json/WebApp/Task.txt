@@ -1,2 +1,0 @@
-﻿For Answers and Questions, add a dropdown box where you can select the author of that question.
-When you POST the form, the author needs to be included by ID. This means you will need to create a ViewModel for the creation of Answers and Questions.
