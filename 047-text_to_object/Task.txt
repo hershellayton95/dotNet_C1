@@ -1,0 +1,2 @@
+﻿Create a console application that calls the endpoint you create in exercise 5.
+It should read the JSON and save it to your local hard drive.
